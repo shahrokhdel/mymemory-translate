@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Translation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: none;
+      font-size: 14px;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #e6ffe6;
+      border: 1px solid #b3ffb3;
+      border-radius: 4px;
+      display: none;
+    }
+
+    .error {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #ffe6e6;
+      border: 1px solid #ffb3b3;
+      border-radius: 4px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Translation</h1>
+    <form id="translate-form">
+      <label for="text">Enter your text:</label>
+      <textarea id="text" name="text" required></textarea>
+
+      <label for="sourceLang">Source Language:</label>
+      <select id="sourceLang" name="sourceLang" required>
+        <option value="en">English</option>
+        <option value="fa">Farsi</option>
+        <option value="de">German</option>
+        <!-- Add more languages as needed -->
+      </select>
+
+      <label for="targetLang">Target Language:</label>
+      <select id="targetLang" name="targetLang" required>
+        <option value="en">English</option>
+        <option value="fa">Farsi</option>
+        <option value="de">German</option>
+        <!-- Add more languages as needed -->
+      </select>
+
+      <button type="submit">Translate</button>
+    </form>
+
+    <div class="result" id="result"></div>
+    <div class="error" id="error"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
